@@ -1,0 +1,247 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+$colorHeader : #131921
+$colorFooter: #232f3e
+$colorFooter2: #131a22
+body
+    background-color: #e3e6e6
+    
+header
+    width: 100%
+    height: 60px
+    background-color: $colorHeader
+    display: flex
+    gap: 5px
+@mixin flexbox($align-items: null, $flex-direction: null, $justify-content: null) 
+  display: flex
+  
+  @if $align-items 
+    align-items: $align-items
+  
+  
+  @if $flex-direction 
+    flex-direction: $flex-direction
+  
+  
+  @if $justify-content 
+    justify-content: $justify-content
+  
+
+.header1
+    width: 14%
+    height: 60px
+    background-color: $colorHeader
+    display: flex
+    @include flexbox(center)
+    padding: 0px 20px
+    &__logo
+        width: 100px
+        height: 35px
+    &__entregar
+        color: white
+        margin-left: 20px
+        border: solid 1px #e6e6e600
+        &:hover
+            border: solid 1px white
+            border-radius: 3px
+        p
+            margin: 0px 20px
+            font-size: 11px
+        strong
+            font-size: 14px
+
+.header2
+    width: 63%
+    height: 60px
+    background-color: white 
+    display: flex
+    padding: 10px 0px
+    background-color: $colorHeader
+
+    input
+        border-radius: 0px
+        border: none
+        font-size: 16px
+        width: 95%
+    &__boton1
+        border-radius: 3px 0px 0px 3px
+        border: none
+        background-color: #e6e6e6
+        width: 65px
+    &__boton2
+        border-radius: 0px 3px 3px 0px
+        border: none
+        background-color: #febd69
+        width: 50px
+
+.header3
+    width: 23%
+    height: 60px
+    background-color: white 
+    @include flexbox(center, row, space-around)
+    background-color: $colorHeader
+    color: white
+    p
+        font-size: 11px
+    &__div1
+        @include flexbox(center)
+    &__div4
+        @extend .header3__div1
+nav
+    width: 100%
+    height: 40px
+    background-color: #232f3e
+    @extend .header3__div1
+    
+    .todo
+        color: white
+        margin: 0px 20px
+        @extend .header3__div1
+    ul
+       display: flex
+       color: white
+       list-style: none
+       gap: 25px
+        
+    
+main
+    @include flexbox(null,null,center)
+    section
+       width: 78.5%
+       height: auto
+       background-color: #e3e6e6
+       background-image: url('images/background.jpg')
+       background-size: contain
+       background-repeat: no-repeat 
+       .contenedor
+        margin-top: 250px
+        @include flexbox(null,null,center)
+        gap: 20px
+        flex-wrap: wrap
+        .secciones1
+            width: 347px
+            height: 420px
+            background-color: white
+            position: relative
+            gap:8px
+            padding: 20px 15px 0px 15px
+            h2
+                margin-bottom: 20px
+            .img-normal
+                width: 100%
+                height: 300px
+
+            .era-seccion
+                @include flexbox(null,colunm,null)
+                flex-wrap: wrap
+                gap:5px
+                p
+                    font-size: 13px
+                    margin-bottom: 35px
+                .cuatro-img
+                  width: 150px
+.white-seccion
+    width: 100%
+    height: auto
+    background-color: white
+    @include flexbox(center,column,null)
+    padding: 50px 0px 15px 0
+    gap: 5px
+    hr
+        width: 100%
+        border-color:  #dddada
+    button
+        width: 250px
+        height: 30px
+        background-color: #febd69
+        border: solid 1px #e0a04b
+        border-radius: 5px
+    div
+        display: flex
+        margin-bottom: 10px
+    p
+        margin-top: 30px
+footer
+    width: 100%
+    height: auto
+    button
+        width: 100%
+        height: 50px
+        background-color:#37475a
+        color: white
+    .footer-1
+        @include flexbox(null,null,center)
+        color: white
+        background-color: $colorFooter
+        div
+            margin: 50px 50px 50px 0
+            h3
+
+            ul
+               list-style: none
+               li
+                margin-bottom: 10px
+    .footer-1a
+        @include flexbox(null,null,center)
+        color: white
+        background-color: $colorFooter
+        gap: 10px
+        .botones-footer
+            @include flexbox(center,null,null)
+            gap: 10px
+            p
+                width: auto
+                height: 50px
+                border: solid 1px white
+.footer-3
+        @include flexbox(null,null,center)
+        flex-wrap: wrap
+        padding: 50px 400px 20px 400px
+        background-color: $colorFooter2
+        height: 500px
+        p
+            width: 90px
+            margin-right: 50px
+            font-size: 12px
+            margin-bottom: 15px
+            color: gray
+.footer-4
+    width: 100%
+    height: 70px
+    @include flexbox(center,column,null)
+    background-color: $colorFooter2
+    gap: 8px
+    color: white
+    ul 
+        @include flexbox(null,null,center)
+        list-style: none
+        color: white
+        gap: 18px
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
